@@ -21,21 +21,35 @@
             text-decoration: none;
             /* display: inline; */
             /* text-align: center; */
+            box-sizing: border-box;
+            /* overflow-x: hidden;
+            overflow-y: visible; */
+
+        }
+
+        html {
+            height: 100%;
+            width: 100%;
+            color: rgb(85, 85, 85);
         }
 
         body {
             width: 100%;
-            height: 100vh;
+            height: 100%;
+            /* overflow-x: hidden; */
             /* display: inline; */
         }
 
         .container {
             width: 100%;
-            height: 100%;
+            min-height: 100vh;
+            max-height: max-content;
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: rgb(196, 231, 255);
+            isolation: isolate;
+
         }
 
         .content {
@@ -45,9 +59,9 @@
             flex-direction: column;
             text-align: center;
             align-items: center;
-            
+
             word-wrap: break-word;
-            
+
 
         }
 
@@ -62,46 +76,70 @@
 
         }
 
+        h2 {
+            background-image: linear-gradient(20deg, #efadff, #ae8bff);
+            display: inline;
+            /* -webkit-text-stroke: 1px antiquewhite; */
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+
         h2,
         p {
             margin: 0;
         }
 
         hr {
-            width: 2ch;
+            width: 5ch;
             color: aliceblue;
-            
+            border: 1px solid whitesmoke;
+
         }
-        .hero{
+        .sub-heading{
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        .hero {
             margin-top: 2em;
             margin-bottom: 2em;
         }
-        .hero h1{
+
+        .hero h1 {
             font-size: 6em;
             color: rgb(255, 47, 151);
             font-weight: bolder;
 
         }
-        .link,  a{
+
+        .link,
+        a {
             margin-bottom: 2em;
             margin-top: 2em;
         }
-        .link a{
+
+        .link a {
             color: rgb(57, 122, 131);
             font-weight: bold;
             background-color: aliceblue;
+            border-radius: 0.35em;
             padding: 0.5em 2.5em;
             text-transform: uppercase;
         }
-        .caption{
+
+        /* .caption{
             text-transform: uppercase;
-        }
-        .caption span{
+        } */
+        .caption span {
             font-size: 1.2em;
+            text-transform: uppercase;
             color: rgb(116, 39, 240);
         }
-        #sticker{
-            position: fixed;
+
+        #sticker {
+            position: absolute;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -113,17 +151,100 @@
             /* background-color: blueviolet; */
             /* padding: 3em; */
             box-sizing: border-box;
-            
+            opacity: 0.6;
             transform-origin: center center;
-            transform:  rotate(-45deg) translateY(-70%) translateX(-19%);
+            transform: rotate(-45deg) translateY(-70%) translateX(-19%);
         }
-        #sticker p{
+
+        #sticker p {
             padding: 0.2em 6.5em;
             width: 100%;
-            color: brown;
+            color: rgb(255, 51, 0);
             font-weight: bold;
             text-transform: uppercase;
-            background-color: rgb(255, 255, 200);
+            background-color: rgb(255, 255, 0);
+        }
+
+        .bg-balls {
+            position: absolute;
+            width: 10vw;
+            height: 5vw;
+            border-radius: 50%;
+            z-index: -1;
+            filter: blur(34px) saturate(0.7) hue-rotate(10deg);
+            -webkit-filter: blur(34px) saturate(0.7) hue-rotate(45deg);
+        }
+
+        .ball-1 {
+            background-color: red;
+            top: 60vh;
+            right: 2vw;
+        }
+
+        .ball-2 {
+            background-color: rgb(255, 217, 0);
+            bottom: 15vh;
+            right: 20vw;
+        }
+
+        .ball-3 {
+            background-color: rgb(21, 255, 0);
+            bottom: 20vh;
+            right: 20vw;
+        }
+
+        .ball-4 {
+            background-color: rgb(0, 247, 255);
+            bottom: 13vh;
+            right: 2vw;
+        }
+
+        .ball-5 {
+            background-color: rgb(0, 132, 255);
+            bottom: 41vh;
+            left: 52vw;
+        }
+
+        .ball-6 {
+            background-color: rgb(89, 0, 255);
+            top: -13vh;
+            left: -2vw;
+        }
+
+        .ball-7 {
+            background-color: rgb(195, 0, 255);
+            top: -2vh;
+            left: 2vw;
+        }
+
+        .ball-8 {
+            background-color: rgb(255, 0, 106);
+            top: 34vh;
+            left: 82vw;
+        }
+
+        .ball-9 {
+            background-color: rgb(0, 38, 255);
+            top: 80vh;
+            left: 15vw;
+        }
+
+        .ball-1,
+        .ball-7,
+        .ball-9 {
+            transform: rotate(27deg);
+        }
+
+        .ball-2,
+        .ball-8,
+        .ball-3 {
+            transform: rotate(-80deg);
+        }
+
+        .ball-4,
+        .ball-5,
+        .ball-6 {
+            transform: rotate(77deg);
         }
     </style>
 </head>
@@ -133,6 +254,15 @@
         <div id="sticker">
             <p>Limited Time only</p>
         </div>
+        <div class="bg-balls ball-1"></div>
+        <div class="bg-balls ball-2"></div>
+        <div class="bg-balls ball-3"></div>
+        <div class="bg-balls ball-4"></div>
+        <div class="bg-balls ball-5"></div>
+        <div class="bg-balls ball-6"></div>
+        <div class="bg-balls ball-7"></div>
+        <div class="bg-balls ball-8"></div>
+        <div class="bg-balls ball-9"></div>
         <div class="content">
             <div class="heading">
                 <h2>Time to befriend yourself</h2>
@@ -148,7 +278,7 @@
                 <h4>Grab any journal, Write, Introspect and <span>Growww</span> </h4>
             </div>
             <div class="link">
-                <a href="https://www.google.com/">Avail Offer</a>
+                <a href="https://youtu.be/dQw4w9WgXcQ">Avail Offer</a>
             </div>
         </div>
     </div>
