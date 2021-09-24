@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+
+    </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    </style>
+    <style>
+        * {
+            /* all:revert; */
+            width: fit-content;
+            margin: 0;
+            font-family: 'PT Sans', sans-serif;
+            text-decoration: none;
+            /* display: inline; */
+            /* text-align: center; */
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            /* display: inline; */
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(196, 231, 255);
+        }
+
+        .content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            
+            word-wrap: break-word;
+            
+
+        }
+
+        .heading {
+            font-size: 2em;
+            font-weight: bold;
+            color: purple;
+            max-width: 23ch;
+            min-width: fit-content;
+            text-transform: uppercase;
+            margin-top: 2.7em;
+
+        }
+
+        h2,
+        p {
+            margin: 0;
+        }
+
+        hr {
+            width: 2ch;
+            color: aliceblue;
+            
+        }
+        .hero{
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+        .hero h1{
+            font-size: 6em;
+            color: rgb(255, 47, 151);
+            font-weight: bolder;
+
+        }
+        .link,  a{
+            margin-bottom: 2em;
+            margin-top: 2em;
+        }
+        .link a{
+            color: rgb(57, 122, 131);
+            font-weight: bold;
+            background-color: aliceblue;
+            padding: 0.5em 2.5em;
+            text-transform: uppercase;
+        }
+        .caption{
+            text-transform: uppercase;
+        }
+        .caption span{
+            font-size: 1.2em;
+            color: rgb(116, 39, 240);
+        }
+        #sticker{
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: 0;
+            width: 30em;
+            height: 14em;
+            text-align: center;
+            /* background-color: blueviolet; */
+            /* padding: 3em; */
+            box-sizing: border-box;
+            
+            transform-origin: center center;
+            transform:  rotate(-45deg) translateY(-70%) translateX(-19%);
+        }
+        #sticker p{
+            padding: 0.2em 6.5em;
+            width: 100%;
+            color: brown;
+            font-weight: bold;
+            text-transform: uppercase;
+            background-color: rgb(255, 255, 200);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="sticker">
+            <p>Limited Time only</p>
+        </div>
+        <div class="content">
+            <div class="heading">
+                <h2>Time to befriend yourself</h2>
+            </div>
+            <hr>
+            <div class="sub-heading">
+                <p>Because fiend in need is friend indeed</p>
+            </div>
+            <div class="hero">
+                <h1>40%</h1>
+            </div>
+            <div class="caption">
+                <h4>Grab any journal, Write, Introspect and <span>Growww</span> </h4>
+            </div>
+            <div class="link">
+                <a href="https://www.google.com/">Avail Offer</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
